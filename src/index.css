@@ -1,0 +1,213 @@
+
+@import url("https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;500;600;700&display=swap");
+
+@import "tailwindcss";
+
+/* =========================================
+   GLOBAL SETTINGS
+========================================= */
+
+html {
+  scroll-behavior: smooth;
+  scroll-padding-top: 90px;
+}
+
+body {
+  margin: 0;
+  background-color: #080609;
+  color: #F5F0FA;
+}
+
+.font-code {
+  font-family: "JetBrains Mono", monospace;
+}
+
+/* =========================================
+   FADE IN ANIMATION
+========================================= */
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(8px);
+  }
+
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* =========================================
+   FLOATING GLOW
+========================================= */
+
+@keyframes float-glow {
+  0%, 100% {
+    transform: translateY(0);
+  }
+
+  50% {
+    transform: translateY(-30px);
+  }
+}
+
+.animate-float-glow {
+  animation: float-glow 8s ease-in-out infinite;
+}
+
+/* =========================================
+   FLOATING ELEMENTS
+========================================= */
+
+@keyframes float {
+  0%, 100% {
+    transform: translateY(0);
+  }
+
+  50% {
+    transform: translateY(-15px);
+  }
+}
+
+.animate-float {
+  animation: float 4s ease-in-out infinite;
+}
+
+/* =========================================
+   ROTATING GRADIENT
+========================================= */
+
+@keyframes gradient-spin {
+  from {
+    transform: rotate(0deg);
+  }
+
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+.animate-gradient-spin {
+  animation: gradient-spin 8s linear infinite;
+}
+
+/* =========================================
+   HERO ORBIT ANIMATION
+========================================= */
+
+@keyframes orbitFloat {
+  0%, 100% {
+    transform:
+      translate(-50%, -50%)
+      rotate(-8deg)
+      scale(1);
+  }
+
+  50% {
+    transform:
+      translate(-50%, -50%)
+      rotate(-5deg)
+      scale(1.02);
+  }
+}
+
+.hero-orbit {
+  animation: orbitFloat 7s ease-in-out infinite;
+}
+
+/* =========================================
+   ACCESSIBILITY
+========================================= */
+
+@media (prefers-reduced-motion: reduce) {
+  html {
+    scroll-behavior: auto;
+  }
+
+  .animate-float-glow,
+  .animate-float,
+  .animate-gradient-spin,
+  .hero-orbit {
+    animation: none;
+  }
+}
+
+/* ==========================================
+   CONTACT SECTION - FADE IN ANIMATION
+========================================== */
+
+@keyframes contactFadeIn {
+  from {
+    opacity: 0;
+  }
+
+  to {
+    opacity: 1;
+  }
+}
+
+.contact-fade-in {
+  opacity: 0;
+  animation: contactFadeIn 1.4s ease-out forwards;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .contact-fade-in {
+    opacity: 1;
+    animation: none;
+  }
+}
+
+/* ==========================================
+   TECH STACK GRID - FADE IN
+========================================== */
+
+@keyframes techFadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .tech-card {
+    animation: none !important;
+  }
+}
+
+/* ==========================================
+   SKILLS - TECH STACK CARD ANIMATION
+========================================== */
+
+@keyframes techFadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(18px);
+  }
+
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.tech-card {
+  animation: techFadeIn 0.65s ease-out both;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .tech-card {
+    animation: none !important;
+    opacity: 1 !important;
+    transform: none !important;
+  }
+}
+html {
+  scroll-behavior: smooth;
+}
